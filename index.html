@@ -1135,7 +1135,7 @@
                     pending: 0,
                     error: 0
                 };
-                
+
                 // Realistic base prices for different commodities in different regions (in IDR)
                 this.basePrices = {
                     'Beras': {
@@ -1771,14 +1771,14 @@
 
             getPriceData(source, commodity) {
                 // Get base price for the commodity and source
-                const basePrice = this.basePrices[commodity] && this.basePrices[commodity][source] 
-                    ? this.basePrices[commodity][source] 
+                const basePrice = this.basePrices[commodity] && this.basePrices[commodity][source]
+                    ? this.basePrices[commodity][source]
                     : 12400; // fallback price
 
                 // Add small variation to simulate real market fluctuations (±3%)
                 const variationPercentage = (Math.random() - 0.5) * 0.06; // -3% to +3%
                 const variation = basePrice * variationPercentage;
-                
+
                 return Math.round(basePrice + variation);
             }
         }
@@ -1799,7 +1799,7 @@
             renderSourcesGrid();
             renderComparisonTable();
             renderTicker();
-            
+
             // Auto-sync on load
             setTimeout(async () => {
                 await synchronizer.syncAll();
@@ -1807,7 +1807,7 @@
                 setTimeout(() => {
                     document.getElementById('loading-overlay').classList.add('hidden');
                 }, 500);
-                document.getElementById('last-sync-time').textContent = 
+                document.getElementById('last-sync-time').textContent =
                     'Last sync: ' + new Date().toLocaleString('id-ID');
             }, 1000);
         }
@@ -1886,329 +1886,91 @@
             }).join('');
         }
 
-        // List of commodities available in Siskaperbapo Jatim based on actual data from https://siskaperbapo.jatimprov.go.id/
+        // SISKAPERBAPO Jatim commodities based on https://siskaperbapo.jatimprov.go.id/
         const SISKAPERBAPO_COMMODITIES = [
-            'Beras', // Beras Medium
-            'Beras Premium', // Beras Premium
-            'Gula', // Gula Pasir
-            'Minyak', // Minyak Goreng Curah
-            'Minyak Premium', // Minyak Goreng Kemasan
-            'Daging', // Daging Sapi
-            'Ayam', // Daging Ayam
-            'Telur', // Telur Ayam
-            'Cabai', // Cabai Rawit
-            'Cabai Merah Besar', // Cabai Merah
-            'Cabai Keriting', // Cabai Keriting
-            'Bawang', // Bawang Putih
-            'Bawang Merah', // Bawang Merah
-            'Garam', // Garam
-            'Tepung', // Tepung Terigu
-            'Wortel', // Wortel
-            'Jagung', // Jagung
-            'Buncis', // Buncis
-            'Kacang Tanah', // Kacang Tanah
-            'Kubis', // Kubis
-            'Tomat', // Tomat
-            'Kentang', // Kentang
-            'Timun', // Timun
-            'Kacang Panjang', // Kacang Panjang
-            'Bayam', // Bayam
-            'Sawi', // Sawi
-            'Labu Siam', // Labu Siam
-            'Terong', // Terong
-            'Pare', // Pare
-            'Kol', // Kol
-            'Seledri', // Seledri
-            'Daun Bawang', // Daun Bawang
-            'Melon', // Melon
-            'Semangka', // Semangka
-            'Jeruk', // Jeruk
-            'Pisang', // Pisang
-            'Apel', // Apel
-            'Mangga', // Mangga
-            'Rambutan', // Rambutan
-            'Salak', // Salak
-            'Singkong', // Singkong
-            'Talas', // Talas
-            'Ubi Jalar', // Ubi Jalar
-            'Jahe', // Jahe
-            'Kencur', // Kencur
-            'Lengkuas', // Lengkuas
-            'Kunyit', // Kunyit
-            'Kemiri', // Kemiri
-            'Lada', // Lada
-            'Santan', // Santan
-            'Susu Cair', // Susu Cair
-            'Gandum', // Gandum
-            'Buah Naga', // Buah Naga
-            'Alpukat', // Alpukat
-            'Ceri', // Ceri
-            'Kurma', // Kurma
-            'Delima', // Delima
-            'Kiwi', // Kiwi
-            'Pepaya', // Pepaya
-            'Tuna', // Tuna
-            'Bandeng', // Bandeng
-            'Lele', // Lele
-            'Gurame', // Gurame
-            'Tengiri', // Tengiri
-            'Kembung', // Kembung
-            'Teri', // Teri
-            'Udang', // Udang
-            'Cumi', // Cumi
-            'Kepiting', // Kepiting
-            'Ikan Tongkol', // Ikan Tongkol
-            'Ikan Kakap', // Ikan Kakap
-            'Ikan Nila', // Ikan Nila
-            'Ikan Mujair', // Ikan Mujair
-            'Ikan Patin', // Ikan Patin
-            'Daging Ayam Kampung', // Daging Ayam Kampung
-            'Telur Ayam Kampung', // Telur Ayam Kampung
-            'Daging Kambing', // Daging Kambing
-            'Daging Domba', // Daging Domba
-            'Daging Kerbau', // Daging Kerbau
-            'Daging Itik', // Daging Itik
-            'Telur Itik', // Telur Itik
-            'Madu', // Madu
-            'Keju', // Keju
-            'Mentega', // Mentega
-            'Yoghurt', // Yoghurt
-            'Es Krim', // Es Krim
-            'Coklat', // Coklat
-            'Kue', // Kue
-            'Biskuit', // Biskuit
-            'Kripik', // Kripik
-            'Kerupuk', // Kerupuk
-            'Sambal', // Sambal
-            'Kecap', // Kecap
-            'Saus', // Saus
-            'Mayones', // Mayones
+            'Beras', // Beras Medium / kg
+            'Beras Premium', // Beras Premium / kg
+            'Gula', // Gula Kristal Putih / kg
+            'Minyak', // Minyak Goreng Curah / kg
+            'Minyak Premium', // Minyak Goreng Kemasan Premium / liter
+            'Daging', // Daging Sapi Paha Belakang / kg
+            'Ayam', // Daging Ayam Ras / kg
+            'Daging Ayam Kampung', // Daging Ayam Kampung / ekor
+            'Telur', // Telur Ayam Ras / kg
+            'Telur Ayam Kampung', // Telur Ayam Kampung / kg
+            'Susu UHT', // Susu Kental Manis / Susu Bubuk
+            'Jagung', // Jagung Pipilan Kering / kg
+            'Garam', // Garam Beryodium / kg
+            'Tepung', // Tepung Terigu / kg
+            'Kacang Kedelai', // Kacang Kedelai Impor/Lokal / kg
+            'Cabai Keriting', // Cabe Merah Keriting / kg
+            'Cabai Merah Besar', // Cabe Merah Besar / kg
+            'Cabai', // Cabe Rawit Merah / kg
+            'Bawang Merah', // Bawang Merah / kg
+            'Bawang', // Bawang Putih / kg
+            'Ikan Asin', // Ikan Asin Teri / kg
+            'Kacang Hijau', // Kacang Hijau / kg
+            'Kacang Tanah', // Kacang Tanah / kg
+            'Singkong', // Ketela Pohon / kg
+            'Kubis', // Kol/kubis / kg
+            'Kentang', // Kentang / kg
+            'Tomat', // Tomat / kg
+            'Wortel', // Wortel / kg
+            'Buncis', // Buncis / kg
+            'Ikan Bandeng', // Ikan Bandeng / kg
+            'Ikan Kembung', // Ikan Kembung / kg
+            'Ikan Tuna', // Ikan Tuna / kg
+            'Ikan Tongkol', // Ikan Tongkol / kg
         ];
 
-        // List of commodities available in PIHPS (Bank Indonesia) based on actual data from https://www.bi.go.id/hargapangan
+        // PIHPS (Bank Indonesia) tracks 9 main strategic food commodities
+        // Source: https://www.bi.go.id/hargapangan
         const PIHPS_COMMODITIES = [
-            'Beras', // Beras Medium
-            'Beras Premium', // Beras Premium
-            'Gula', // Gula Pasir
-            'Minyak', // Minyak Goreng Curah
-            'Minyak Premium', // Minyak Goreng Kemasan
-            'Daging', // Daging Sapi
-            'Ayam', // Daging Ayam
-            'Telur', // Telur Ayam
-            'Cabai', // Cabai Rawit
-            'Cabai Merah Besar', // Cabai Merah
-            'Cabai Keriting', // Cabai Keriting
-            'Bawang', // Bawang Putih
-            'Bawang Merah', // Bawang Merah
-            'Garam', // Garam
-            'Tepung', // Tepung Terigu
-            'Wortel', // Wortel
-            'Jagung', // Jagung
-            'Kacang Tanah', // Kacang Tanah
-            'Kubis', // Kubis
-            'Tomat', // Tomat
-            'Kentang', // Kentang
-            'Timun', // Timun
-            'Kacang Panjang', // Kacang Panjang
-            'Bayam', // Bayam
-            'Sawi', // Sawi
-            'Terong', // Terong
-            'Pare', // Pare
-            'Kol', // Kol
-            'Seledri', // Seledri
-            'Daun Bawang', // Daun Bawang
-            'Melon', // Melon
-            'Semangka', // Semangka
-            'Jeruk', // Jeruk
-            'Pisang', // Pisang
-            'Apel', // Apel
-            'Mangga', // Mangga
-            'Rambutan', // Rambutan
-            'Salak', // Salak
-            'Singkong', // Singkong
-            'Talas', // Talas
-            'Ubi Jalar', // Ubi Jalar
-            'Jahe', // Jahe
-            'Kencur', // Kencur
-            'Lengkuas', // Lengkuas
-            'Kunyit', // Kunyit
-            'Kemiri', // Kemiri
-            'Lada', // Lada
-            'Santan', // Santan
-            'Susu Cair', // Susu Cair
-            'Gandum', // Gandum
-            'Buah Naga', // Buah Naga
-            'Alpukat', // Alpukat
-            'Ceri', // Ceri
-            'Kurma', // Kurma
-            'Delima', // Delima
-            'Kiwi', // Kiwi
-            'Pepaya', // Pepaya
-            'Tuna', // Tuna
-            'Bandeng', // Bandeng
-            'Lele', // Lele
-            'Gurame', // Gurame
-            'Tengiri', // Tengiri
-            'Kembung', // Kembung
-            'Teri', // Teri
-            'Udang', // Udang
-            'Cumi', // Cumi
-            'Kepiting', // Kepiting
-            'Ikan Tongkol', // Ikan Tongkol
-            'Ikan Kakap', // Ikan Kakap
-            'Ikan Nila', // Ikan Nila
-            'Ikan Mujair', // Ikan Mujair
-            'Ikan Patin', // Ikan Patin
-            'Daging Ayam Kampung', // Daging Ayam Kampung
-            'Telur Ayam Kampung', // Telur Ayam Kampung
-            'Daging Kambing', // Daging Kambing
-            'Daging Domba', // Daging Domba
-            'Daging Kerbau', // Daging Kerbau
-            'Daging Itik', // Daging Itik
-            'Telur Itik', // Telur Itik
-            'Madu', // Madu
-            'Keju', // Keju
-            'Mentega', // Mentega
-            'Yoghurt', // Yoghurt
-            'Es Krim', // Es Krim
-            'Coklat', // Coklat
-            'Kue', // Kue
-            'Biskuit', // Biskuit
-            'Kripik', // Kripik
-            'Kerupuk', // Kerupuk
-            'Sambal', // Sambal
-            'Kecap', // Kecap
-            'Saus', // Saus
-            'Mayones', // Mayones
+            'Beras', // Beras Medium - tracked by BI PIHPS
+            'Gula', // Gula Pasir - tracked by BI PIHPS
+            'Minyak', // Minyak Goreng Curah - tracked by BI PIHPS
+            'Daging', // Daging Sapi - tracked by BI PIHPS
+            'Ayam', // Daging Ayam Ras - tracked by BI PIHPS
+            'Telur', // Telur Ayam Ras - tracked by BI PIHPS
+            'Cabai', // Cabai Rawit Merah - tracked by BI PIHPS
+            'Cabai Merah Besar', // Cabai Merah Besar - tracked by BI PIHPS
+            'Bawang Merah', // Bawang Merah - tracked by BI PIHPS
+            'Jagung', // Jagung - tracked by BI PIHPS
         ];
 
-        // List of commodities available in SP2KP (Ministry of Trade) based on actual data from https://sp2kp.kemendag.go.id/
+        // SP2KP (Kemendag) tracks 16 main strategic food commodities
+        // Source: https://sp2kp.kemendag.go.id/
         const SP2KP_COMMODITIES = [
-            'Beras', // Beras
-            'Beras Premium', // Beras Premium
-            'Gula', // Gula Pasir
-            'Minyak', // Minyak Goreng
-            'Minyak Premium', // Minyak Goreng Premium
-            'Daging', // Daging Sapi
-            'Ayam', // Daging Ayam
-            'Telur', // Telur Ayam
-            'Cabai', // Cabai Rawit
-            'Cabai Merah Besar', // Cabai Merah
-            'Cabai Keriting', // Cabai Keriting
-            'Bawang', // Bawang Putih
-            'Bawang Merah', // Bawang Merah
-            'Garam', // Garam Dapur
-            'Tepung', // Tepung Terigu
-            'Wortel', // Wortel
-            'Jagung', // Jagung
-            'Buncis', // Buncis
-            'Brokoli', // Brokoli
-            'Selada', // Selada
-            'Sayur Putih', // Sayur Putih
-            'Pakcoy', // Pakcoy
-            'Jamur Tiram', // Jamur Tiram
-            'Bunga Kol', // Bunga Kol
-            'Kecambah', // Kecambah
-            'Kacang Tanah', // Kacang Tanah
-            'Seledri', // Seledri
-            'Asem', // Asem
-            'Kunyit', // Kunyit
-            'Kemiri', // Kemiri
-            'Daun Bawang', // Daun Bawang
-            'Kubis', // Kubis
-            'Baby Corn', // Baby Corn
-            'Timun', // Timun
-            'Kacang Panjang', // Kacang Panjang
-            'Edaname', // Edaname
-            'Terong Hijau', // Terong Hijau
-            'Terong Ungu', // Terong Ungu
-            'Tahu', // Tahu
-            'Tempe', // Tempe
-            'Susu UHT', // Susu UHT
-            'Tomat', // Tomat
-            'Apel Fuji', // Apel Fuji
-            'Apel Hijau Malang', // Apel Hijau Malang
-            'Anggur Merah', // Anggur Merah
-            'Anggur Muscat', // Anggur Muscat
-            'Kelengkeng Emas', // Kelengkeng Emas
-            'Kelengkeng Merah', // Kelengkeng Merah
-            'Minyak Kita', // Minyak Kita
-            'Jeruk Santang', // Jeruk Santang
-            'Jeruk Manis', // Jeruk Manis
-            'Jeruk Baby', // Jeruk Baby
-            'Pir Yali', // Pir Yali
-            'Buah Naga', // Buah Naga
-            'Pisang Ambon', // Pisang Ambon
-            'Pisang Cavendish', // Pisang Cavendish
-            'Salak Pondoh', // Salak Pondoh
-            'Jeruk Lokal', // Jeruk Lokal
-            'Melon', // Melon
-            'Semangka' // Semangka
+            'Beras', // Beras Medium - tracked by SP2KP
+            'Beras Premium', // Beras Premium - tracked by SP2KP
+            'Gula', // Gula Pasir Curah - tracked by SP2KP
+            'Minyak', // Minyak Goreng Sawit Curah - tracked by SP2KP
+            'Minyak Premium', // Minyak Goreng Sawit Kemasan Premium - tracked by SP2KP
+            'Daging', // Daging Sapi Paha Belakang - tracked by SP2KP
+            'Ayam', // Daging Ayam Ras - tracked by SP2KP
+            'Telur', // Telur Ayam Ras - tracked by SP2KP
+            'Cabai', // Cabai Rawit Merah - tracked by SP2KP
+            'Cabai Merah Besar', // Cabai Merah Besar - tracked by SP2KP
+            'Cabai Keriting', // Cabai Merah Keriting - tracked by SP2KP
+            'Bawang', // Bawang Putih - tracked by SP2KP
+            'Bawang Merah', // Bawang Merah - tracked by SP2KP
+            'Tepung', // Tepung Terigu - tracked by SP2KP
+            'Kacang Kedelai', // Kedelai Impor - tracked by SP2KP
+            'Minyak Kita', // Minyakita - tracked by SP2KP
         ];
 
+        // BPN (Badan Pangan Nasional) only tracks 9 main strategic commodities
+        // Source: https://panelharga.badanpangan.go.id/beranda
         const BPN_COMMODITIES = [
-            'Beras', // Beras medium tracked by BPN
-            'Beras Premium', // Premium rice variety
-            'Minyak', // Minyak Goreng
-            'Minyak Premium', // Premium cooking oil
-            'Gula', // Gula Pasir
-            'Gula Premium', // Premium sugar
-            'Daging', // Daging Sapi
-            'Ayam', // Daging Ayam
-            'Telur', // Telur Ayam
-            'Cabai', // Cabai Rawit
-            'Cabai Merah Besar', // Cabai Merah
-            'Cabai Keriting', // Cabai Keriting
-            'Bawang', // Bawang Putih
-            'Bawang Merah', // Bawang Merah
-            'Garam', // Garam Dapur
-            'Tepung', // Tepung Terigu
-            'Wortel', // Sayuran pokok
-            'Sawi', // Sayuran pokok
-            'Jagung', // Jagung Kuning
-            'Buncis', // Sayuran
-            'Brokoli', // Sayuran
-            'Selada', // Sayuran
-            'Sayur Putih', // Sayuran
-            'Pakcoy', // Sayuran
-            'Jamur Tiram', // Sayuran
-            'Bunga Kol', // Sayuran
-            'Kecambah', // Sayuran
-            'Kacang Tanah', // Kacang-kacangan
-            'Seledri', // Sayuran
-            'Asem', // Bumbu
-            'Kunyit', // Bumbu
-            'Kemiri', // Bumbu
-            'Daun Bawang', // Sayuran
-            'Kubis', // Sayuran
-            'Baby Corn', // Sayuran
-            'Timun', // Sayuran
-            'Kacang Panjang', // Sayuran
-            'Edaname', // Sayuran
-            'Terong Hijau', // Sayuran
-            'Terong Ungu', // Sayuran
-            'Tahu', // Produk olahan
-            'Tempe', // Produk olahan
-            'Susu UHT', // Minuman
-            'Tomat', // Sayuran
-            'Apel Fuji', // Buah
-            'Apel Hijau Malang', // Buah
-            'Anggur Merah', // Buah
-            'Anggur Muscat', // Buah
-            'Kelengkeng Emas', // Buah
-            'Kelengkeng Merah', // Buah
-            'Minyak Kita', // Minyak Kita
-            'Jeruk Santang', // Buah
-            'Jeruk Manis', // Buah
-            'Jeruk Baby', // Buah
-            'Pir Yali', // Buah
-            'Buah Naga', // Buah
-            'Pisang Ambon', // Buah
-            'Pisang Cavendish', // Buah
-            'Salak Pondoh', // Buah
-            'Jeruk Lokal', // Buah
-            'Melon', // Buah
-            'Semangka' // Buah
+            'Beras', // Beras medium - tracked by BPN
+            'Gula', // Gula Pasir - tracked by BPN
+            'Minyak', // Minyak Goreng Curah - tracked by BPN
+            'Daging', // Daging Sapi - tracked by BPN
+            'Ayam', // Daging Ayam - tracked by BPN
+            'Telur', // Telur Ayam Ras - tracked by BPN
+            'Cabai', // Cabai Rawit Merah - tracked by BPN
+            'Bawang Merah', // Bawang Merah - tracked by BPN
+            'Bawang' // Bawang Putih - tracked by BPN
         ];
 
         function renderComparisonTable(commodity = 'all', zoneFilter = 'all') {
@@ -2231,13 +1993,13 @@
             filteredDataSources.forEach(region => {
                 commoditiesToDisplay.forEach(currentCommodity => {
                     const prices = {
-                        bpn_new: BPN_COMMODITIES.includes(currentCommodity) ? 
+                        bpn_new: BPN_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('bpn_new', currentCommodity) : null, // BPN from Badan Pangan
-                        bpn: PIHPS_COMMODITIES.includes(currentCommodity) ? 
+                        bpn: PIHPS_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('bpn', currentCommodity) : null, // PIHPS from Bank Indonesia
-                        siskaperbapo: SISKAPERBAPO_COMMODITIES.includes(currentCommodity) ? 
+                        siskaperbapo: SISKAPERBAPO_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('siskaperbapo', currentCommodity) : null,
-                        sp2kp: SP2KP_COMMODITIES.includes(currentCommodity) ? 
+                        sp2kp: SP2KP_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('sp2kp', currentCommodity) : null,
                         local: region.endpoints.find(e => e.type === 'local') ?
                             synchronizer.getPriceData('local', currentCommodity) : null,
@@ -2712,18 +2474,18 @@
             filteredDataSources.forEach(r => {
                 commoditiesToExport.forEach(currentCommodity => {
                     const prices = {
-                        bpn_new: BPN_COMMODITIES.includes(currentCommodity) ? 
+                        bpn_new: BPN_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('bpn_new', currentCommodity) : null, // BPN from Badan Pangan
-                        bpn: PIHPS_COMMODITIES.includes(currentCommodity) ? 
+                        bpn: PIHPS_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('bpn', currentCommodity) : null, // PIHPS from Bank Indonesia
-                        siskaperbapo: SISKAPERBAPO_COMMODITIES.includes(currentCommodity) ? 
+                        siskaperbapo: SISKAPERBAPO_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('siskaperbapo', currentCommodity) : null,
-                        sp2kp: SP2KP_COMMODITIES.includes(currentCommodity) ? 
+                        sp2kp: SP2KP_COMMODITIES.includes(currentCommodity) ?
                             synchronizer.getPriceData('sp2kp', currentCommodity) : null,
                         local: r.endpoints.find(e => e.type === 'local') ? synchronizer.getPriceData('local', currentCommodity) : '',
                         produsen: synchronizer.getPriceData('produsen', currentCommodity)
                     };
-                    
+
                     // Calculate average excluding null values (for bpn_new, bpn, siskaperbapo, and sp2kp when not available)
                     const validPrices = [prices.bpn_new, prices.bpn, prices.siskaperbapo, prices.sp2kp, (prices.local || prices.sp2kp), prices.produsen].filter(price => price !== null);
                     const avg = Math.round(validPrices.reduce((sum, price) => sum + price, 0) / validPrices.length);

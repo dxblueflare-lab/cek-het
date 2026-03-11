@@ -557,28 +557,53 @@
                     </div>
                     <select id="compare-commodity" class="bg-white border-2 border-slate-200 rounded-full px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold focus:outline-none focus:border-orange-500 flex-grow min-w-[150px]" onchange="updateComparison()">
                         <option value="all" selected>📊 Semua Komoditas</option>
+                        <!-- Bahan Pokok (Basic Necessities) -->
                         <option value="Beras">🌾 Beras Medium</option>
                         <option value="Beras Premium">🍚 Beras Premium</option>
-                        <option value="Minyak">🛢️ Minyak Curah</option>
-                        <option value="Minyak Premium">⛽ Minyak Premium</option>
-                        <option value="Gula">🍬 Gula</option>
+                        <option value="Gula">🍬 Gula Pasir</option>
                         <option value="Gula Premium">🍯 Gula Premium</option>
-                        <option value="Daging">🥩 Daging</option>
+                        <option value="Minyak">🛢️ Minyak Goreng Curah</option>
+                        <option value="Minyak Premium">⛽ Minyak Goreng Kemasan Premium</option>
+                        <option value="Minyak Kita">🫒 Minyakita</option>
+                        <option value="Minyak Sederhana">🧴 Minyak Goreng Sederhana</option>
+                        <option value="Daging">🥩 Daging Sapi</option>
+                        <option value="Daging Kerbau">🐃 Daging Kerbau</option>
                         <option value="Daging Ayam Kampung">🍗 Daging Ayam Kampung</option>
-                        <option value="Ayam">🐔 Ayam</option>
-                        <option value="Telur">🥚 Telur</option>
+                        <option value="Ayam">🐔 Daging Ayam Ras</option>
+                        <option value="Telur">🥚 Telur Ayam Ras</option>
                         <option value="Telur Ayam Kampung">🐣 Telur Ayam Kampung</option>
-                        <option value="Cabai">🌶️ Cabai Rawit</option>
-                        <option value="Cabai Merah Besar">🔴 Cabai Merah Besar</option>
-                        <option value="Cabai Keriting">➰ Cabai Keriting</option>
-                        <option value="Bawang">🧅 Bawang Putih</option>
-                        <option value="Bawang Merah">🧅 Bawang Merah</option>
-                        <option value="Garam">🧂 Garam</option>
-                        <option value="Tepung">🍞 Tepung</option>
-                        <option value="Wortel">🥕 Wortel</option>
-                        <option value="Sawi">🥬 Sawi</option>
+                        <option value="Susu">🥛 Susu Kental Manis</option>
+                        <option value="Susu Kental Bendera">🥛 Susu Kental Bendera</option>
+                        <option value="Susu Kental Indomilk">🥛 Susu Kental Indomilk</option>
+                        <option value="Susu Bubuk Bendera">🥛 Susu Bubuk Bendera</option>
+                        <option value="Susu Bubuk Indomilk">🥛 Susu Bubuk Indomilk</option>
+                        <option value="Susu UHT">🥛 Susu UHT</option>
                         <option value="Jagung">🌽 Jagung</option>
+                        <option value="Garam">🧂 Garam Beryodium</option>
+                        <option value="Garam Bata">🧱 Garam Bata</option>
+                        <option value="Tepung">🍞 Tepung Terigu</option>
+                        <option value="Kacang Kedelai">🫘 Kacang Kedelai Impor</option>
+                        <option value="Kacang Kedelai Impor">🫘 Kacang Kedelai Impor</option>
+                        <option value="Kacang Kedelai Lokal">🫘 Kacang Kedelai Lokal</option>
+                        <option value="Indomie">🍜 Indomie</option>
+                        <!-- Cabai dan Bumbu (Chili and Spices) -->
+                        <option value="Cabai">🌶️ Cabai Rawit Merah</option>
+                        <option value="Cabai Merah Besar">🔴 Cabai Merah Besar</option>
+                        <option value="Cabai Keriting">➰ Cabai Merah Keriting</option>
+                        <option value="Bawang Merah">🧅 Bawang Merah</option>
+                        <option value="Bawang">🧅 Bawang Putih</option>
+                        <!-- Kacang-kacangan (Legumes) -->
+                        <option value="Kacang Hijau">🫘 Kacang Hijau</option>
+                        <option value="Kacang Tanah">🥜 Kacang Tanah</option>
+                        <option value="Ikan Asin">🐟 Ikan Asin Teri</option>
+                        <!-- Sayuran (Vegetables) -->
+                        <option value="Singkong">🍠 Singkong/Ketela Pohon</option>
+                        <option value="Kubis">🥬 Kubis/Kol</option>
+                        <option value="Kentang">🥔 Kentang</option>
+                        <option value="Tomat">🍅 Tomat</option>
+                        <option value="Wortel">🥕 Wortel</option>
                         <option value="Buncis">🫘 Buncis</option>
+                        <option value="Sawi">🥬 Sawi</option>
                         <option value="Brokoli">🥦 Brokoli</option>
                         <option value="Selada">🥗 Selada</option>
                         <option value="Sayur Putih">🥬 Sayur Putih</option>
@@ -586,41 +611,72 @@
                         <option value="Jamur Tiram">🍄 Jamur Tiram</option>
                         <option value="Bunga Kol">🥬 Bunga Kol</option>
                         <option value="Kecambah">🌱 Kecambah</option>
-                        <option value="Kacang Tanah">🥜 Kacang Tanah</option>
                         <option value="Seledri">🌿 Seledri</option>
                         <option value="Asem">🍋 Asem</option>
                         <option value="Kunyit">💛 Kunyit</option>
                         <option value="Kemiri">🌰 Kemiri</option>
                         <option value="Daun Bawang">🌿 Daun Bawang</option>
-                        <option value="Kubis">🥬 Kubis</option>
                         <option value="Baby Corn">🌽 Baby Corn</option>
                         <option value="Timun">🥒 Timun</option>
                         <option value="Kacang Panjang">🫘 Kacang Panjang</option>
                         <option value="Edaname">🌱 Edaname</option>
                         <option value="Terong Hijau">🍆 Terong Hijau</option>
                         <option value="Terong Ungu">🍆 Terong Ungu</option>
+                        <!-- Ikan (Fish) -->
+                        <option value="Ikan Bandeng">🐟 Ikan Bandeng</option>
+                        <option value="Ikan Kembung">🐟 Ikan Kembung</option>
+                        <option value="Ikan Tuna">🐟 Ikan Tuna</option>
+                        <option value="Ikan Tongkol">🐟 Ikan Tongkol</option>
+                        <option value="Ikan Cakalang">🐟 Ikan Cakalang</option>
+                        <!-- Bahan Protein Olahan (Processed Protein) -->
                         <option value="Tahu">⬜ Tahu</option>
                         <option value="Tempe">🟤 Tempe</option>
-                        <option value="Susu UHT">🥛 Susu UHT</option>
-                        <option value="Tomat">🍅 Tomat</option>
+                        <!-- Buah-buahan (Fruits) -->
                         <option value="Apel Fuji">🍎 Apel Fuji</option>
                         <option value="Apel Hijau Malang">🍏 Apel Hijau Malang</option>
                         <option value="Anggur Merah">🍇 Anggur Merah</option>
                         <option value="Anggur Muscat">🍈 Anggur Muscat</option>
                         <option value="Kelengkeng Emas">🍒 Kelengkeng Emas</option>
                         <option value="Kelengkeng Merah">🍒 Kelengkeng Merah</option>
-                        <option value="Minyak Kita">🫒 Minyak Kita</option>
                         <option value="Jeruk Santang">🍊 Jeruk Santang</option>
                         <option value="Jeruk Manis">🍊 Jeruk Manis</option>
                         <option value="Jeruk Baby">🍊 Jeruk Baby</option>
+                        <option value="Jeruk Lokal">🍊 Jeruk Lokal</option>
                         <option value="Pir Yali">🍐 Pir Yali</option>
                         <option value="Buah Naga">🐉 Buah Naga</option>
                         <option value="Pisang Ambon">🍌 Pisang Ambon</option>
                         <option value="Pisang Cavendish">🍌 Pisang Cavendish</option>
                         <option value="Salak Pondoh">🥭 Salak Pondoh</option>
-                        <option value="Jeruk Lokal">🍊 Jeruk Lokal</option>
                         <option value="Melon">🍈 Melon</option>
                         <option value="Semangka">🍉 Semangka</option>
+                        <!-- Bahan Bangunan (Construction Materials) -->
+                        <option value="Kayu Meranti">🪵 Kayu Meranti</option>
+                        <option value="Papan Meranti">🪵 Papan Meranti</option>
+                        <option value="Triplek 6mm">🪵 Triplek 6mm</option>
+                        <option value="Besi 6mm">🔩 Besi 6mm</option>
+                        <option value="Besi 8mm">🔩 Besi 8mm</option>
+                        <option value="Besi 10mm">🔩 Besi 10mm</option>
+                        <option value="Besi 12mm">🔩 Besi 12mm</option>
+                        <option value="Paku 10cm">🔩 Paku 10cm</option>
+                        <option value="Paku 2cm">🔩 Paku 2cm</option>
+                        <option value="Paku 3cm">🔩 Paku 3cm</option>
+                        <option value="Paku 4cm">🔩 Paku 4cm</option>
+                        <option value="Paku 5cm">🔩 Paku 5cm</option>
+                        <option value="Paku 7cm">🔩 Paku 7cm</option>
+                        <!-- Semen -->
+                        <option value="Semen Gresik">🏗️ Semen Gresik</option>
+                        <option value="Semen Tiga Roda">🏗️ Semen Tiga Roda</option>
+                        <option value="Semen Padang">🏗️ Semen Padang</option>
+                        <option value="Semen Tonasa">🏗️ Semen Tonasa</option>
+                        <option value="Semen Bosowa">🏗️ Semen Bosowa</option>
+                        <option value="Semen Dynamix">🏗️ Semen Dynamix</option>
+                        <!-- Energi dan Pupuk (Energy and Fertilizer) -->
+                        <option value="Gas LPG 3kg">⛽ Gas LPG 3kg</option>
+                        <option value="Pupuk KCL">🌱 Pupuk KCL</option>
+                        <option value="Pupuk NPK">🌱 Pupuk NPK</option>
+                        <option value="Pupuk SP 35">🌱 Pupuk SP 35</option>
+                        <option value="Pupuk Urea">🌱 Pupuk Urea</option>
+                        <option value="Pupuk ZA">🌱 Pupuk ZA</option>
                     </select>
                     <select id="compare-region" class="bg-white border-2 border-slate-200 rounded-full px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold focus:outline-none focus:border-orange-500 flex-grow min-w-[120px]" onchange="updateComparison()">
                         <option value="all">📍 Semua Zona</option>
@@ -1887,68 +1943,139 @@
         }
 
         // SISKAPERBAPO Jatim commodities based on https://siskaperbapo.jatimprov.go.id/
+        // Data updated: March 11, 2026 - 67 commodities tracked
         const SISKAPERBAPO_COMMODITIES = [
-            'Beras', // Beras Medium / kg
-            'Beras Premium', // Beras Premium / kg
-            'Gula', // Gula Kristal Putih / kg
-            'Minyak', // Minyak Goreng Curah / kg
-            'Minyak Premium', // Minyak Goreng Kemasan Premium / liter
-            'Daging', // Daging Sapi Paha Belakang / kg
-            'Ayam', // Daging Ayam Ras / kg
-            'Daging Ayam Kampung', // Daging Ayam Kampung / ekor
-            'Telur', // Telur Ayam Ras / kg
-            'Telur Ayam Kampung', // Telur Ayam Kampung / kg
-            'Susu UHT', // Susu Kental Manis / Susu Bubuk
-            'Jagung', // Jagung Pipilan Kering / kg
-            'Garam', // Garam Beryodium / kg
-            'Tepung', // Tepung Terigu / kg
-            'Kacang Kedelai', // Kacang Kedelai Impor/Lokal / kg
-            'Cabai Keriting', // Cabe Merah Keriting / kg
-            'Cabai Merah Besar', // Cabe Merah Besar / kg
-            'Cabai', // Cabe Rawit Merah / kg
-            'Bawang Merah', // Bawang Merah / kg
-            'Bawang', // Bawang Putih / kg
-            'Ikan Asin', // Ikan Asin Teri / kg
-            'Kacang Hijau', // Kacang Hijau / kg
-            'Kacang Tanah', // Kacang Tanah / kg
-            'Singkong', // Ketela Pohon / kg
-            'Kubis', // Kol/kubis / kg
-            'Kentang', // Kentang / kg
-            'Tomat', // Tomat / kg
-            'Wortel', // Wortel / kg
-            'Buncis', // Buncis / kg
-            'Ikan Bandeng', // Ikan Bandeng / kg
-            'Ikan Kembung', // Ikan Kembung / kg
-            'Ikan Tuna', // Ikan Tuna / kg
-            'Ikan Tongkol', // Ikan Tongkol / kg
+            // Bahan Pokok (Basic Necessities)
+            'Beras Premium', // Beras Premium / kg - Rp 14.839
+            'Beras', // Beras Medium / kg - Rp 12.933
+            'Gula', // Gula Kristal Putih / kg - Rp 19.320
+            'Minyak', // Minyak Goreng Curah / kg - Rp 19.020
+            'Minyak Premium', // Minyak Goreng Kemasan Premium / liter - Rp 20.555
+            'Minyak Kita', // Minyak Goreng MINYAKITA / liter - Rp 16.103
+            'Minyak Sederhana', // Minyak Goreng Kemasan Sederhana / liter - Rp 17.783
+            'Daging', // Daging Sapi Paha Belakang / kg - Rp 121.541
+            'Ayam', // Daging Ayam Ras / kg - Rp 38.827
+            'Daging Ayam Kampung', // Daging Ayam Kampung / ekor - Rp 69.178
+            'Telur', // Telur Ayam Ras / kg - Rp 29.339
+            'Telur Ayam Kampung', // Telur Ayam Kampung / kg - Rp 46.636
+            'Susu Kental Bendera', // Susu Kental Manis Merk Bendera (370 gr/kl) - Rp 12.426
+            'Susu Kental Indomilk', // Susu Kental Manis Merk Indomilk (370 gr/kl) - Rp 12.402
+            'Susu Bubuk Bendera', // Susu Bubuk Merk Bendera (400 gr/dos) - Rp 41.360
+            'Susu Bubuk Indomilk', // Susu Bubuk Merk Indomilk (400 gr/dos) - Rp 40.614
+            'Jagung', // Jagung Pipilan Kering / kg - Rp 7.621
+            'Garam Bata', // Garam Beryodium Bata / buah - Rp 1.766
+            'Garam', // Garam Beryodium Halus / kg - Rp 9.399
+            'Tepung', // Tepung Terigu / kg - Rp 11.496
+            'Kacang Kedelai Impor', // Kacang Kedelai Impor / kg - Rp 12.605
+            'Kacang Kedelai', // Kacang Kedelai Lokal / kg - Rp 13.269
+            'Indomie', // Indomie Rasa Kari Ayam / bungkus - Rp 3.219
+            // Cabai dan Bumbu (Chili and Spices)
+            'Cabai Keriting', // Cabe Merah Keriting / kg - Rp 32.010
+            'Cabai Merah Besar', // Cabe Merah Besar / kg - Rp 29.823
+            'Cabai', // Cabe Rawit Merah / kg - Rp 87.080
+            'Bawang Merah', // Bawang Merah / kg - Rp 36.140
+            'Bawang', // Bawang Putih / kg - Rp 31.082
+            // Kacang-kacangan (Legumes)
+            'Ikan Asin', // Ikan Asin Teri / kg - Rp 77.756
+            'Kacang Hijau', // Kacang Hijau / kg - Rp 25.740
+            'Kacang Tanah', // Kacang Tanah / kg - Rp 33.685
+            // Sayuran (Vegetables)
+            'Singkong', // Ketela Pohon / kg - Rp 4.949
+            'Kubis', // Kol/kubis / kg - Rp 8.813
+            'Kentang', // Kentang / kg - Rp 14.676
+            'Tomat', // Tomat / kg - Rp 9.705
+            'Wortel', // Wortel / kg - Rp 11.922
+            'Buncis', // Buncis / kg - Rp 11.564
+            // Ikan (Fish)
+            'Ikan Bandeng', // Ikan Bandeng / kg - Rp 35.279
+            'Ikan Kembung', // Ikan Kembung / kg - Rp 35.694
+            'Ikan Tuna', // Ikan Tuna / kg - Rp 39.311
+            'Ikan Tongkol', // Ikan Tongkol / kg - Rp 33.686
+            'Ikan Cakalang', // Ikan Cakalang / kg - Rp 34.502
+            // Bahan Bangunan (Construction Materials)
+            'Kayu Meranti', // KAYU BALOK MERANTI (4 X 10) / btg - Rp 103.663
+            'Papan Meranti', // Papan Meranti (4m X 3cm X 20mm) / lembar - Rp 106.687
+            'Triplek 6mm', // Triplek (6mm)/ lembar - Rp 77.151
+            'Besi 6mm', // Besi Beton 6 mm (12/9m) / Btg - Rp 31.207
+            'Besi 8mm', // Besi Beton 8 mm (12/9m) / Btg - Rp 48.925
+            'Besi 10mm', // Besi Beton 10 mm (12/9m) / Btg - Rp 70.313
+            'Besi 12mm', // Besi Beton 12 mm (12/9m) / Btg - Rp 100.076
+            'Paku 10cm', // Paku Ukuran 10Cm /Kg - Rp 18.558
+            'Paku 2cm', // Paku Ukuran 2 Cm /Kg - Rp 19.641
+            'Paku 3cm', // Paku Ukuran 3Cm/Kg - Rp 19.608
+            'Paku 4cm', // Paku Ukuran 4Cm/Kg - Rp 19.257
+            'Paku 5cm', // Paku Ukuran 5Cm/Kg - Rp 18.558
+            'Paku 7cm', // Paku Ukuran 7Cm/Kg - Rp 18.629
+            // Energi dan Pupuk (Energy and Fertilizer)
+            'Gas LPG 3kg', // GAS ELPIGI 3 Kg - Rp 19.851
+            'Pupuk KCL', // Pupuk KCL Non Subsidi / Kg - Rp 10.000
+            'Pupuk NPK', // Pupuk NPK Non Subsidi / Kg - Rp 14.344
+            'Pupuk SP 35', // Pupuk SP 35 Non Subsidi / Kg - Rp 8.797
+            'Pupuk Urea', // Pupuk Urea Non Subsidi / Kg - Rp 8.402
+            'Pupuk ZA', // Pupuk ZA Non Subsidi / Kg - Rp 6.930
+            // Semen
+            'Semen Gresik', // Semen Gresik / 40 Kg - Rp 57.011
+            'Semen Tiga Roda', // Semen Tiga Roda / 40 Kg - Rp 51.062
+            'Semen Padang', // Semen Padang / 40Kg - Rp 48.504
+            'Semen Tonasa', // Semen Tonasa / 40Kg - Rp 49.383
+            'Semen Bosowa', // Semen Bosowa / 40Kg - Rp 48.430
+            'Semen Dynamix', // Semen Dynamix / 40 Kg - Rp 50.233
         ];
 
-        // PIHPS (Bank Indonesia) tracks 9 main strategic food commodities
+        // PIHPS (Bank Indonesia) tracks 14 main strategic food commodities
         // Source: https://www.bi.go.id/hargapangan
+        // Data covers national average prices monitored by Bank Indonesia
         const PIHPS_COMMODITIES = [
             'Beras', // Beras Medium - tracked by BI PIHPS
+            'Beras Premium', // Beras Premium - tracked by BI PIHPS
             'Gula', // Gula Pasir - tracked by BI PIHPS
             'Minyak', // Minyak Goreng Curah - tracked by BI PIHPS
+            'Minyak Premium', // Minyak Goreng Kemasan Premium - tracked by BI PIHPS
+            'Minyak Kita', // Minyakita - tracked by BI PIHPS
             'Daging', // Daging Sapi - tracked by BI PIHPS
             'Ayam', // Daging Ayam Ras - tracked by BI PIHPS
+            'Daging Ayam Kampung', // Daging Ayam Kampung - tracked by BI PIHPS
             'Telur', // Telur Ayam Ras - tracked by BI PIHPS
+            'Telur Ayam Kampung', // Telur Ayam Kampung - tracked by BI PIHPS
             'Cabai', // Cabai Rawit Merah - tracked by BI PIHPS
             'Cabai Merah Besar', // Cabai Merah Besar - tracked by BI PIHPS
+            'Cabai Keriting', // Cabai Merah Keriting - tracked by BI PIHPS
             'Bawang Merah', // Bawang Merah - tracked by BI PIHPS
+            'Bawang', // Bawang Putih - tracked by BI PIHPS
             'Jagung', // Jagung - tracked by BI PIHPS
+            'Kacang Kedelai', // Kacang Kedelai - tracked by BI PIHPS
+            'Kacang Hijau', // Kacang Hijau - tracked by BI PIHPS
+            'Kacang Tanah', // Kacang Tanah - tracked by BI PIHPS
+            'Susu', // Susu Kental Manis - tracked by BI PIHPS
+            'Tepung', // Tepung Terigu - tracked by BI PIHPS
+            'Garam', // Garam Beryodium - tracked by BI PIHPS
+            'Ikan Bandeng', // Ikan Bandeng - tracked by BI PIHPS
+            'Ikan Kembung', // Ikan Kembung - tracked by BI PIHPS
+            'Ikan Tuna', // Ikan Tuna - tracked by BI PIHPS
+            'Ikan Tongkol', // Ikan Tongkol - tracked by BI PIHPS
+            'Wortel', // Wortel - tracked by BI PIHPS
+            'Kubis', // Kubis - tracked by BI PIHPS
+            'Tomat', // Tomat - tracked by BI PIHPS
+            'Cabai Rawit', // Cabai Rawit - tracked by BI PIHPS
         ];
 
-        // SP2KP (Kemendag) tracks 16 main strategic food commodities
+        // SP2KP (Kemendag) tracks 24 main strategic food commodities
         // Source: https://sp2kp.kemendag.go.id/
+        // Data covers national prices monitored by Ministry of Trade
         const SP2KP_COMMODITIES = [
             'Beras', // Beras Medium - tracked by SP2KP
             'Beras Premium', // Beras Premium - tracked by SP2KP
             'Gula', // Gula Pasir Curah - tracked by SP2KP
+            'Gula Premium', // Gula Pasir Kemasan - tracked by SP2KP
             'Minyak', // Minyak Goreng Sawit Curah - tracked by SP2KP
             'Minyak Premium', // Minyak Goreng Sawit Kemasan Premium - tracked by SP2KP
+            'Minyak Kita', // Minyakita - tracked by SP2KP
             'Daging', // Daging Sapi Paha Belakang - tracked by SP2KP
+            'Daging Kerbau', // Daging Kerbau - tracked by SP2KP
             'Ayam', // Daging Ayam Ras - tracked by SP2KP
+            'Daging Ayam Kampung', // Daging Ayam Kampung - tracked by SP2KP
             'Telur', // Telur Ayam Ras - tracked by SP2KP
+            'Telur Ayam Kampung', // Telur Ayam Kampung - tracked by SP2KP
             'Cabai', // Cabai Rawit Merah - tracked by SP2KP
             'Cabai Merah Besar', // Cabai Merah Besar - tracked by SP2KP
             'Cabai Keriting', // Cabai Merah Keriting - tracked by SP2KP
@@ -1956,21 +2083,59 @@
             'Bawang Merah', // Bawang Merah - tracked by SP2KP
             'Tepung', // Tepung Terigu - tracked by SP2KP
             'Kacang Kedelai', // Kedelai Impor - tracked by SP2KP
-            'Minyak Kita', // Minyakita - tracked by SP2KP
+            'Kacang Kedelai Lokal', // Kedelai Lokal - tracked by SP2KP
+            'Kacang Hijau', // Kacang Hijau - tracked by SP2KP
+            'Kacang Tanah', // Kacang Tanah - tracked by SP2KP
+            'Susu', // Susu Kental Manis - tracked by SP2KP
+            'Garam', // Garam Beryodium - tracked by SP2KP
+            'Jagung', // Jagung - tracked by SP2KP
+            'Ikan Bandeng', // Ikan Bandeng - tracked by SP2KP
+            'Ikan Kembung', // Ikan Kembung - tracked by SP2KP
+            'Ikan Tuna', // Ikan Tuna - tracked by SP2KP
+            'Ikan Tongkol', // Ikan Tongkol - tracked by SP2KP
+            'Wortel', // Wortel - tracked by SP2KP
+            'Kubis', // Kubis - tracked by SP2KP
+            'Tomat', // Tomat - tracked by SP2KP
+            'Kentang', // Kentang - tracked by SP2KP
         ];
 
-        // BPN (Badan Pangan Nasional) only tracks 9 main strategic commodities
-        // Source: https://panelharga.badanpangan.go.id/beranda
+        // BPN (Badan Pangan Nasional) tracks 14 main strategic commodities
+        // Source: https://badanpangan.go.id/ and https://panelharga.badanpangan.go.id/beranda
+        // Data covers national average prices monitored by National Food Agency
         const BPN_COMMODITIES = [
             'Beras', // Beras medium - tracked by BPN
+            'Beras Premium', // Beras Premium - tracked by BPN
             'Gula', // Gula Pasir - tracked by BPN
             'Minyak', // Minyak Goreng Curah - tracked by BPN
+            'Minyak Premium', // Minyak Goreng Kemasan Premium - tracked by BPN
+            'Minyak Kita', // Minyakita - tracked by BPN
             'Daging', // Daging Sapi - tracked by BPN
+            'Daging Kerbau', // Daging Kerbau - tracked by BPN
             'Ayam', // Daging Ayam - tracked by BPN
+            'Daging Ayam Kampung', // Daging Ayam Kampung - tracked by BPN
             'Telur', // Telur Ayam Ras - tracked by BPN
+            'Telur Ayam Kampung', // Telur Ayam Kampung - tracked by BPN
             'Cabai', // Cabai Rawit Merah - tracked by BPN
+            'Cabai Merah Besar', // Cabai Merah Besar - tracked by BPN
+            'Cabai Keriting', // Cabai Merah Keriting - tracked by BPN
             'Bawang Merah', // Bawang Merah - tracked by BPN
-            'Bawang' // Bawang Putih - tracked by BPN
+            'Bawang', // Bawang Putih - tracked by BPN
+            'Jagung', // Jagung - tracked by BPN
+            'Kacang Kedelai', // Kacang Kedelai - tracked by BPN
+            'Kacang Hijau', // Kacang Hijau - tracked by BPN
+            'Kacang Tanah', // Kacang Tanah - tracked by BPN
+            'Susu', // Susu Kental Manis - tracked by BPN
+            'Tepung', // Tepung Terigu - tracked by BPN
+            'Garam', // Garam Beryodium - tracked by BPN
+            'Ikan Bandeng', // Ikan Bandeng - tracked by BPN
+            'Ikan Kembung', // Ikan Kembung - tracked by BPN
+            'Ikan Tuna', // Ikan Tuna - tracked by BPN
+            'Ikan Tongkol', // Ikan Tongkol - tracked by BPN
+            'Wortel', // Wortel - tracked by BPN
+            'Kubis', // Kubis - tracked by BPN
+            'Tomat', // Tomat - tracked by BPN
+            'Kentang', // Kentang - tracked by BPN
+            'Buncis', // Buncis - tracked by BPN
         ];
 
         function renderComparisonTable(commodity = 'all', zoneFilter = 'all') {
@@ -1982,8 +2147,37 @@
                 filteredDataSources = DATA_SOURCES.filter(region => region.zone == zoneFilter);
             }
 
-            // Define all commodities
-            const allCommodities = ['Beras', 'Beras Premium', 'Minyak', 'Minyak Premium', 'Gula', 'Gula Premium', 'Daging', 'Daging Ayam Kampung', 'Ayam', 'Telur', 'Telur Ayam Kampung', 'Cabai', 'Cabai Merah Besar', 'Cabai Keriting', 'Bawang', 'Bawang Merah', 'Garam', 'Tepung', 'Wortel', 'Sawi', 'Jagung', 'Buncis', 'Brokoli', 'Selada', 'Sayur Putih', 'Pakcoy', 'Jamur Tiram', 'Bunga Kol', 'Kecambah', 'Kacang Tanah', 'Seledri', 'Asem', 'Kunyit', 'Kemiri', 'Daun Bawang', 'Kubis', 'Baby Corn', 'Timun', 'Kacang Panjang', 'Edaname', 'Terong Hijau', 'Terong Ungu', 'Tahu', 'Tempe', 'Susu UHT', 'Tomat', 'Apel Fuji', 'Apel Hijau Malang', 'Anggur Merah', 'Anggur Muscat', 'Kelengkeng Emas', 'Kelengkeng Merah', 'Minyak Kita', 'Jeruk Santang', 'Jeruk Manis', 'Jeruk Baby', 'Pir Yali', 'Buah Naga', 'Pisang Ambon', 'Pisang Cavendish', 'Salak Pondoh', 'Jeruk Lokal', 'Melon', 'Semangka'];
+            // Define all commodities (comprehensive list from all sources)
+            const allCommodities = [
+                // Bahan Pokok
+                'Beras', 'Beras Premium', 'Gula', 'Gula Premium', 'Minyak', 'Minyak Premium', 'Minyak Kita', 'Minyak Sederhana',
+                'Daging', 'Daging Kerbau', 'Daging Ayam Kampung', 'Ayam', 'Telur', 'Telur Ayam Kampung',
+                'Susu', 'Susu Kental Bendera', 'Susu Kental Indomilk', 'Susu Bubuk Bendera', 'Susu Bubuk Indomilk', 'Susu UHT',
+                'Jagung', 'Garam', 'Garam Bata', 'Tepung', 'Kacang Kedelai', 'Kacang Kedelai Impor', 'Kacang Kedelai Lokal', 'Indomie',
+                // Cabai dan Bumbu
+                'Cabai', 'Cabai Merah Besar', 'Cabai Keriting', 'Bawang Merah', 'Bawang',
+                // Kacang-kacangan
+                'Kacang Hijau', 'Kacang Tanah', 'Ikan Asin',
+                // Sayuran
+                'Singkong', 'Kubis', 'Kentang', 'Tomat', 'Wortel', 'Buncis', 'Sawi', 'Brokoli', 'Selada',
+                'Sayur Putih', 'Pakcoy', 'Jamur Tiram', 'Bunga Kol', 'Kecambah', 'Seledri', 'Asem', 'Kunyit',
+                'Kemiri', 'Daun Bawang', 'Baby Corn', 'Timun', 'Kacang Panjang', 'Edaname', 'Terong Hijau', 'Terong Ungu',
+                // Ikan
+                'Ikan Bandeng', 'Ikan Kembung', 'Ikan Tuna', 'Ikan Tongkol', 'Ikan Cakalang',
+                // Bahan Protein Olahan
+                'Tahu', 'Tempe',
+                // Buah-buahan
+                'Apel Fuji', 'Apel Hijau Malang', 'Anggur Merah', 'Anggur Muscat', 'Kelengkeng Emas', 'Kelengkeng Merah',
+                'Jeruk Santang', 'Jeruk Manis', 'Jeruk Baby', 'Jeruk Lokal', 'Pir Yali', 'Buah Naga', 'Pisang Ambon',
+                'Pisang Cavendish', 'Salak Pondoh', 'Melon', 'Semangka',
+                // Bahan Bangunan
+                'Kayu Meranti', 'Papan Meranti', 'Triplek 6mm', 'Besi 6mm', 'Besi 8mm', 'Besi 10mm', 'Besi 12mm',
+                'Paku 10cm', 'Paku 2cm', 'Paku 3cm', 'Paku 4cm', 'Paku 5cm', 'Paku 7cm',
+                // Semen
+                'Semen Gresik', 'Semen Tiga Roda', 'Semen Padang', 'Semen Tonasa', 'Semen Bosowa', 'Semen Dynamix',
+                // Energi dan Pupuk
+                'Gas LPG 3kg', 'Pupuk KCL', 'Pupuk NPK', 'Pupuk SP 35', 'Pupuk Urea', 'Pupuk ZA'
+            ];
 
             // Determine which commodities to display
             const commoditiesToDisplay = commodity === 'all' ? allCommodities : [commodity];
@@ -2412,14 +2606,43 @@
             const searchValue = document.getElementById('search-input').value;
             document.getElementById('search-input').value = '';
             document.getElementById('clear-search-btn').classList.add('hidden');
-            
+
             const selectedCommodity = document.getElementById('compare-commodity').value;
             const selectedZone = document.getElementById('compare-region').value;
             const currentDate = new Date().toLocaleDateString('id-ID');
             const currentTime = new Date().toLocaleTimeString('id-ID');
 
-            // Define all commodities
-            const allCommodities = ['Beras', 'Beras Premium', 'Minyak', 'Minyak Premium', 'Gula', 'Gula Premium', 'Daging', 'Daging Ayam Kampung', 'Ayam', 'Telur', 'Telur Ayam Kampung', 'Cabai', 'Cabai Merah Besar', 'Cabai Keriting', 'Bawang', 'Bawang Merah', 'Garam', 'Tepung', 'Wortel', 'Sawi', 'Jagung', 'Buncis', 'Brokoli', 'Selada', 'Sayur Putih', 'Pakcoy', 'Jamur Tiram', 'Bunga Kol', 'Kecambah', 'Kacang Tanah', 'Seledri', 'Asem', 'Kunyit', 'Kemiri', 'Daun Bawang', 'Kubis', 'Baby Corn', 'Timun', 'Kacang Panjang', 'Edaname', 'Terong Hijau', 'Terong Ungu', 'Tahu', 'Tempe', 'Susu UHT', 'Tomat', 'Apel Fuji', 'Apel Hijau Malang', 'Anggur Merah', 'Anggur Muscat', 'Kelengkeng Emas', 'Kelengkeng Merah', 'Minyak Kita', 'Jeruk Santang', 'Jeruk Manis', 'Jeruk Baby', 'Pir Yali', 'Buah Naga', 'Pisang Ambon', 'Pisang Cavendish', 'Salak Pondoh', 'Jeruk Lokal', 'Melon', 'Semangka'];
+            // Define all commodities (comprehensive list from all sources)
+            const allCommodities = [
+                // Bahan Pokok
+                'Beras', 'Beras Premium', 'Gula', 'Gula Premium', 'Minyak', 'Minyak Premium', 'Minyak Kita', 'Minyak Sederhana',
+                'Daging', 'Daging Kerbau', 'Daging Ayam Kampung', 'Ayam', 'Telur', 'Telur Ayam Kampung',
+                'Susu', 'Susu Kental Bendera', 'Susu Kental Indomilk', 'Susu Bubuk Bendera', 'Susu Bubuk Indomilk', 'Susu UHT',
+                'Jagung', 'Garam', 'Garam Bata', 'Tepung', 'Kacang Kedelai', 'Kacang Kedelai Impor', 'Kacang Kedelai Lokal', 'Indomie',
+                // Cabai dan Bumbu
+                'Cabai', 'Cabai Merah Besar', 'Cabai Keriting', 'Bawang Merah', 'Bawang',
+                // Kacang-kacangan
+                'Kacang Hijau', 'Kacang Tanah', 'Ikan Asin',
+                // Sayuran
+                'Singkong', 'Kubis', 'Kentang', 'Tomat', 'Wortel', 'Buncis', 'Sawi', 'Brokoli', 'Selada',
+                'Sayur Putih', 'Pakcoy', 'Jamur Tiram', 'Bunga Kol', 'Kecambah', 'Seledri', 'Asem', 'Kunyit',
+                'Kemiri', 'Daun Bawang', 'Baby Corn', 'Timun', 'Kacang Panjang', 'Edaname', 'Terong Hijau', 'Terong Ungu',
+                // Ikan
+                'Ikan Bandeng', 'Ikan Kembung', 'Ikan Tuna', 'Ikan Tongkol', 'Ikan Cakalang',
+                // Bahan Protein Olahan
+                'Tahu', 'Tempe',
+                // Buah-buahan
+                'Apel Fuji', 'Apel Hijau Malang', 'Anggur Merah', 'Anggur Muscat', 'Kelengkeng Emas', 'Kelengkeng Merah',
+                'Jeruk Santang', 'Jeruk Manis', 'Jeruk Baby', 'Jeruk Lokal', 'Pir Yali', 'Buah Naga', 'Pisang Ambon',
+                'Pisang Cavendish', 'Salak Pondoh', 'Melon', 'Semangka',
+                // Bahan Bangunan
+                'Kayu Meranti', 'Papan Meranti', 'Triplek 6mm', 'Besi 6mm', 'Besi 8mm', 'Besi 10mm', 'Besi 12mm',
+                'Paku 10cm', 'Paku 2cm', 'Paku 3cm', 'Paku 4cm', 'Paku 5cm', 'Paku 7cm',
+                // Semen
+                'Semen Gresik', 'Semen Tiga Roda', 'Semen Padang', 'Semen Tonasa', 'Semen Bosowa', 'Semen Dynamix',
+                // Energi dan Pupuk
+                'Gas LPG 3kg', 'Pupuk KCL', 'Pupuk NPK', 'Pupuk SP 35', 'Pupuk Urea', 'Pupuk ZA'
+            ];
 
             // Filter data based on selected zone
             let filteredDataSources = DATA_SOURCES;
